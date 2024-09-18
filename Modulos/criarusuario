@@ -272,7 +272,7 @@ sizemin=$(echo ${#username})
 	exit 1
 }
 sizemax=$(echo ${#username})
-[[ $sizemax -gt 10 ]] && {
+[[ $sizemax -gt 30 ]] && {
 	echo -e "\n${cor1}Você digitou um nome de usuário muito grande"
 	echo -e "${cor1}use no máximo 10 caracteres!${scor}\n"
 	exit 1
@@ -283,7 +283,7 @@ echo -ne "\033[1;32mSenha:\033[1;37m ";read password
 	exit 1
 }
 sizepass=$(echo ${#password})
-[[ $sizepass -lt 4 ]] && {
+[[ $sizepass -lt 2 ]] && {
 	echo -e "\n${cor1}Senha curta!, use no mínimo 4 caracteres${scor}\n"
 	exit 1
 }
