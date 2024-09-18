@@ -17,7 +17,7 @@ fun_multilogin() {
 					listpid=$(grep -E ,"$user", /etc/openvpn/openvpn-status.log | cut -d "," -f3 | head -n $pidokill)
 					while read ovpids; do
 						(
-							telnet localhost 7505 <<-EOF
+							telnet localhost 7777 <<-EOF
 								kill $ovpids
 							EOF
 						) &>/dev/null &
